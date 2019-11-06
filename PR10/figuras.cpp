@@ -236,23 +236,23 @@ void CFiguras::prisma3(GLuint text, GLuint text2)  //Funcion creacion casa
 	};
 
 	glBindTexture(GL_TEXTURE_2D, text2);   // choose the texture to use.
-	//glBegin(GL_POLYGON);	//Frontal
-	//	//glColor3f(0.0,0.0,1.0);
-	//glNormal3f(0.0f, 0.0f, 1.0f);
-	//glTexCoord2f(0.0f, 0.0f); glVertex3fv(vertice[0]);
-	//glTexCoord2f(1.0f, 0.0f); glVertex3fv(vertice[1]);
-	//glTexCoord2f(1.0f, 1.0f); glVertex3fv(vertice[2]);
-	//glTexCoord2f(0.0f, 1.0f); glVertex3fv(vertice[3]);
-	//glEnd();
-
-		glBegin(GL_POLYGON);	//Division
+	glBegin(GL_POLYGON);	//Frontal
 		//glColor3f(0.0,0.0,1.0);
 	glNormal3f(0.0f, 0.0f, 1.0f);
-	glTexCoord2f(0.0f, 0.0f); glVertex3fv(vertice[2]);
-	glTexCoord2f(1.0f, 0.0f); glVertex3fv(vertice[3]);
-	glTexCoord2f(1.0f, 1.0f); glVertex3fv(vertice[5]);
-	glTexCoord2f(0.0f, 1.0f); glVertex3fv(vertice[8]);
+	glTexCoord2f(0.0f, 0.0f); glVertex3fv(vertice[0]);
+	glTexCoord2f(1.0f, 0.0f); glVertex3fv(vertice[1]);
+	glTexCoord2f(1.0f, 1.0f); glVertex3fv(vertice[2]);
+	glTexCoord2f(0.0f, 1.0f); glVertex3fv(vertice[3]);
 	glEnd();
+
+	//	glBegin(GL_POLYGON);	//Division
+	////	//glColor3f(0.0,0.0,1.0);
+	////glNormal3f(0.0f, 0.0f, 1.0f);
+	////glTexCoord2f(0.0f, 0.0f); glVertex3fv(vertice[2]);
+	////glTexCoord2f(1.0f, 0.0f); glVertex3fv(vertice[3]);
+	////glTexCoord2f(1.0f, 1.0f); glVertex3fv(vertice[5]);
+	////glTexCoord2f(0.0f, 1.0f); glVertex3fv(vertice[8]);
+	////glEnd();
 
 
 
@@ -290,18 +290,18 @@ void CFiguras::prisma4(GLuint text, GLuint text2)  //Funcion creacion contornos
 {
 
 	GLfloat vertice[12][3] = {
-				{1.9 ,-0.7, 0.375},		//Coordenadas Vértice 7 V10
-				{7.1,-0.7, 0.375},		//Coordenadas Vértice 7 V11
-				{7.1,-0.7, 0.325},		//Coordenadas Vértice 7 V12
-				{1.9 ,-0.7, 0.325},		//Coordenadas Vértice 7 V13
-				{1.9 ,-3.4, -0.8},    //Coordenadas Vértice 4 V14
-				{1.9 ,-3.4, -0.75},    //Coordenadas Vértice 4 V15
-				{1.9 ,-6.1, 0.325},		//Coordenadas Vértice 7 V16
-				{1.9 ,-6.1, 0.375},		//Coordenadas Vértice 7 V17
-				{7.1 ,-6.1, 0.375},		//Coordenadas Vértice 7 V18
-				{7.1 ,-6.1, 0.325},		//Coordenadas Vértice 7 V19
-				{7.1 ,-3.4, -0.8},		   //Coordenadas Vértice 7 V20
-				{7.1 ,-3.4, -0.75},		   //Coordenadas Vértice 7 V21
+				{2.0 ,-0.7, 0.375},		//Coordenadas Vértice 7 V10
+				{7.0,-0.7, 0.375},		//Coordenadas Vértice 7 V11
+				{7.0,-0.7, 0.325},		//Coordenadas Vértice 7 V12
+				{2.0 ,-0.7, 0.325},		//Coordenadas Vértice 7 V13
+				{2.0 ,-3.4, -0.8},    //Coordenadas Vértice 4 V14
+				{2.0 ,-3.4, -0.75},    //Coordenadas Vértice 4 V15
+				{2.0 ,-6.1, 0.325},		//Coordenadas Vértice 7 V16
+				{2.0 ,-6.1, 0.375},		//Coordenadas Vértice 7 V17
+				{7.0 ,-6.1, 0.375},		//Coordenadas Vértice 7 V18
+				{7.0 ,-6.1, 0.325},		//Coordenadas Vértice 7 V19
+				{7.0 ,-3.4, -0.8},		   //Coordenadas Vértice 7 V20
+				{7.0 ,-3.4, -0.75},		   //Coordenadas Vértice 7 V21
 				//Tejado
 	};
 
@@ -369,18 +369,18 @@ void CFiguras::prisma5(GLuint text, GLuint text2)  //Funcion creacion prisma
 
 	GLfloat vertice[12][3] = {
 
-				{1.9 ,-0.7, 0.375},		//Coordenadas Vértice 7 V10
-				{7.1,-0.7, 0.375},		//Coordenadas Vértice 7 V11
-				{7.1,-0.7, 0.325},		//Coordenadas Vértice 7 V12
-				{1.9 ,-0.7, 0.325},		//Coordenadas Vértice 7 V13
-				{1.9 ,-3.4, -0.8},    //Coordenadas Vértice 4 V14
-				{1.9 ,-3.4, -0.75},    //Coordenadas Vértice 4 V15
-				{1.9 ,-6.1, 0.325},		//Coordenadas Vértice 7 V16
-				{1.9 ,-6.1, 0.375},		//Coordenadas Vértice 7 V17
-				{7.1 ,-6.1, 0.375},		//Coordenadas Vértice 7 V18
-				{7.1 ,-6.1, 0.325},		//Coordenadas Vértice 7 V19
-				{7.1 ,-3.4, -0.8},		   //Coordenadas Vértice 7 V20
-				{7.1 ,-3.4, -0.75},		   //Coordenadas Vértice 7 V21
+				{2.0 ,-0.7, 0.375},		//Coordenadas Vértice 7 V10
+				{7.0,-0.7, 0.375},		//Coordenadas Vértice 7 V11
+				{7.0,-0.7, 0.325},		//Coordenadas Vértice 7 V12
+				{2.0 ,-0.7, 0.325},		//Coordenadas Vértice 7 V13
+				{2.0 ,-3.4, -0.8},    //Coordenadas Vértice 4 V14
+				{2.0 ,-3.4, -0.75},    //Coordenadas Vértice 4 V15
+				{2.0 ,-6.1, 0.325},		//Coordenadas Vértice 7 V16
+				{2.0 ,-6.1, 0.375},		//Coordenadas Vértice 7 V17
+				{7.0 ,-6.1, 0.375},		//Coordenadas Vértice 7 V18
+				{7.0 ,-6.1, 0.325},		//Coordenadas Vértice 7 V19
+				{7.0 ,-3.4, -0.8},		   //Coordenadas Vértice 7 V20
+				{7.0 ,-3.4, -0.75},		   //Coordenadas Vértice 7 V21
 	};
 
 	glBindTexture(GL_TEXTURE_2D, text2);   // choose the texture to use.

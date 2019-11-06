@@ -47,15 +47,20 @@ CTexture text11;	//Casa01
 CTexture text12;	//Casa01
 CTexture text13;	//Casa01
 CTexture text14;	//Casa01
+CTexture text15;	//Casa01
+CTexture text16;	//Casa01
+CTexture text17;	//Casa01
+CTexture text18;	//Casa01
+
 
 CFiguras fig1;
 CFiguras fig2;
 CFiguras fig3;
-CFiguras fig4;	//Pasto01
-CFiguras fig5;	//Casa01
+CFiguras fig4;	
+CFiguras fig5;	
 CFiguras fig6;
 
-CFiguras fig7; //Para el monito
+CFiguras fig7; 
 
 //Figuras de 3D Studio
 CModel kit;
@@ -145,6 +150,16 @@ void InitGL ( GLvoid )     // Inicializamos parametros
 	text13.BuildGLTexture();
 	text13.ReleaseImage();
 
+
+	text14.LoadBMP("puerta.bmp");
+	text14.BuildGLTexture();
+	text14.ReleaseImage();
+
+
+	text15.LoadBMP("ventana.bmp");
+	text15.BuildGLTexture();
+	text15.ReleaseImage();
+
 	//text3.LoadTGA("city/arrow.tga");
 	//text3.BuildGLTexture();
 	//text3.ReleaseImage();
@@ -153,13 +168,17 @@ void InitGL ( GLvoid )     // Inicializamos parametros
 	//text4.BuildGLTexture();
 	//text4.ReleaseImage();
 
-	//text5.LoadTGA("city/pasto01.tga");
-	//text5.BuildGLTexture();
-	//text5.ReleaseImage();
+	text16.LoadBMP("cesped.bmp");
+	text16.BuildGLTexture();
+	text16.ReleaseImage();
 
-	//text6.LoadBMP("city/casa01.tga");
-	//text6.BuildGLTexture();
-	//text6.ReleaseImage();
+	text17.LoadBMP("ventana_bart.bmp");
+	text17.BuildGLTexture();
+	text17.ReleaseImage();
+
+	text18.LoadBMP("boliche.bmp");
+	text18.BuildGLTexture();
+	text18.ReleaseImage();
 
 	//Carga de Figuras
 	kit._3dsLoad("kitt.3ds");	
@@ -239,6 +258,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 		//	glEnable(GL_LIGHTING);
 		//glPopMatrix();
 
+
 			//glPushMatrix(); //Camino2
 			//	glTranslatef(-23.5,0.0,0.0);
 			//	glScalef(40,0.1,7);
@@ -255,23 +275,15 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			//	glEnable(GL_LIGHTING);
 			//glPopMatrix();
 
-			//glPushMatrix(); //Pasto
-			//	glTranslatef(0.0,0.0,4.0);
-			//	glScalef(87,0.1,1);
-			//	glDisable(GL_LIGHTING);
-			//	fig4.prisma2(text5.GLindex, 0);
-			//	glEnable(GL_LIGHTING);
-			//glPopMatrix();
-
-			glPushMatrix(); //Casa01
-				glTranslatef(0.0,3.0,20.0);
-				glRotatef(90,1,0,0);
-				glRotatef(180,0,0,1);
-				glScalef(18,6.0,9.0);
+			glPushMatrix(); //Pasto
+				glTranslatef(-100.0,-20.0,-80.0);
+				glScalef(240,0.1,180);
 				glDisable(GL_LIGHTING);
-				fig5.prisma2(text6.GLindex, 0);
+				fig4.prisma2(text16.GLindex, text16.GLindex);
 				glEnable(GL_LIGHTING);
 			glPopMatrix();
+
+
 
 
 
@@ -282,6 +294,51 @@ void display ( void )   // Creamos la funcion donde se dibuja
 				fig5.prisma3(text3.GLindex, text3.GLindex);
 				glEnable(GL_LIGHTING);
 			glPopMatrix();
+
+			glPushMatrix(); //Ventana
+			glTranslatef(24.0, -4.0, -10.0); //x,y,z
+			glRotatef(90, 1, 0, 0);
+			glScalef(3.2, 0.001, 3.2); //(x,z,y)
+			glDisable(GL_LIGHTING);
+			fig5.prisma2(text15.GLindex, text15.GLindex);
+			glEnable(GL_LIGHTING);
+			glPopMatrix();
+			glPushMatrix(); 
+			glTranslatef(30.4, -4.0, -10.0); //x,y,z
+			glRotatef(90, 1, 0, 0);
+			glScalef(3.2, 0.001, 3.2); //(x,z,y)
+			glDisable(GL_LIGHTING);
+			fig5.prisma2(text15.GLindex, text15.GLindex);
+			glEnable(GL_LIGHTING);
+			glPopMatrix();
+
+			glPushMatrix(); //Ventana
+			glTranslatef(53.0, -4.0, -10.0); //x,y,z
+			glRotatef(90, 1, 0, 0);
+			glScalef(3.2, 0.001, 3.2); //(x,z,y)
+			glDisable(GL_LIGHTING);
+			fig5.prisma2(text15.GLindex, text15.GLindex);
+			glEnable(GL_LIGHTING);
+			glPopMatrix();
+			glPushMatrix(); 
+			glTranslatef(59.4, -4.0, -10.0); //x,y,z
+			glRotatef(90, 1, 0, 0);
+			glScalef(3.2, 0.001, 3.2); //(x,z,y)
+			glDisable(GL_LIGHTING);
+			fig5.prisma2(text15.GLindex, text15.GLindex);
+			glEnable(GL_LIGHTING);
+			glPopMatrix();
+
+			glPushMatrix(); //Puerta
+			glTranslatef(40.0, -10.0, -9.9); //x,y,z
+			glRotatef(90, 1, 0, 0);
+			glScalef(5.0, 0.001, 5.0); //(x,z,y)
+			glDisable(GL_LIGHTING);
+			fig5.prisma2(text14.GLindex, text14.GLindex);
+			glEnable(GL_LIGHTING);
+			glPopMatrix();
+
+
 
 			glPushMatrix(); //Contorno Tejado 1
 				glRotatef(90, 1, 0, 0);
@@ -300,9 +357,9 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			glPopMatrix();
 
 			glPushMatrix(); //Casa02
-				glTranslatef(50.0, 0.0, -24.0);
+				glTranslatef(50.1, 0.0, -24.0);
 				glRotatef(90, 1, 0, 0);
-				glScalef(10, 6.0, 10.0); //x,z,y
+				glScalef(10, 6.0, 10.0); //x,z,y 50, 28.8, 27.5
 				glDisable(GL_LIGHTING);
 				fig5.prisma3(text3.GLindex, text3.GLindex);
 				glEnable(GL_LIGHTING);
@@ -310,7 +367,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 
 
 			glPushMatrix(); //Contorno Tejado 2
-			glTranslatef(50.0, 0.0, -24.0);
+			glTranslatef(50.1, 0.0, -24.0);
 			glRotatef(90, 1, 0, 0);
 			glScalef(10, 6.0, 10.0);
 			glDisable(GL_LIGHTING);
@@ -322,7 +379,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 
 
 			glPushMatrix(); //Tejado
-			glTranslatef(50.0, 0.0, -24.0);
+			glTranslatef(50.1, 0.0, -24.0);
 			glRotatef(90, 1, 0, 0);
 			glScalef(10, 6.0, 10.0);
 			glDisable(GL_LIGHTING);
@@ -363,12 +420,13 @@ void display ( void )   // Creamos la funcion donde se dibuja
 
 
 			//CUARTO BART
-			glTranslatef(-50.0, 0.0, 0.0);
+			glScalef(1.5, 1.5, 1.5); //(x,z,y) 19.5,12,9
+			glTranslatef(-86.6, -1.8, -38.4); //x,y,z menos para abajo
 			glPushMatrix();
 				glPushMatrix(); //Cuarto-Bart
 				glTranslatef(120.0, 0.0, 0.0);
 				glRotatef(90, 1, 0, 0);
-				glScalef(6.5, 4, 3); //(x,z,y)
+				glScalef(6.5, 4, 3); //(x,z,y) 13,8,6
 				glDisable(GL_LIGHTING);
 				fig5.prisma2(text5.GLindex, text5.GLindex);
 				glEnable(GL_LIGHTING);
@@ -414,7 +472,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 				glTranslatef(120.3, -1.65, 0.235); //x,y,z
 				glRotatef(90, 1, 0, 0);
 				glDisable(GL_LIGHTING);
-				fig5.esfera (0.15,20,20,text6.GLindex);
+				fig7.esfera (0.15,20,20,text8.GLindex);
 				glEnable(GL_LIGHTING);
 				glPopMatrix();
 
@@ -431,7 +489,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 				glTranslatef(120.3, -1.65, 3.110); //x,y,z
 				glRotatef(90, 1, 0, 0);
 				glDisable(GL_LIGHTING);
-				fig5.esfera(0.15, 20, 20,text6.GLindex);
+				fig1.esfera(0.15, 20, 20,text6.GLindex);
 				glEnable(GL_LIGHTING);
 				glPopMatrix();
 
@@ -452,9 +510,11 @@ void display ( void )   // Creamos la funcion donde se dibuja
 				glRotatef(90, 1, 0, 0);
 				glScalef(1.6, 0.001, 1.4); //(x,z,y)
 				glDisable(GL_LIGHTING);
-				fig5.prisma2(text10.GLindex, text10.GLindex);
+				fig5.prisma2(text17.GLindex, text17.GLindex);
 				glEnable(GL_LIGHTING);
 				glPopMatrix();
+
+
 
 				glTranslatef(-1.5, 0.0, 0.0); //x,y,z
 				glPushMatrix(); //LIBRERO
@@ -533,6 +593,14 @@ void display ( void )   // Creamos la funcion donde se dibuja
 				glPopMatrix();
 				glPopMatrix(); //TERMINA LIBRERO
 
+				glPushMatrix(); //boliche
+				glTranslatef(130.4, -4.5, 1.575); //x,y,z
+				glRotatef(90, 1, 0, 0);
+				glDisable(GL_LIGHTING);
+				fig1.esfera(0.6, 20, 20, text18.GLindex);
+				glEnable(GL_LIGHTING);
+				glPopMatrix();
+
 				glPushMatrix(); //Escritorio back
 				glTranslatef(132.8, -4.0, 1.175); //x,y,z
 				glRotatef(90, 1, 0, 0);
@@ -581,8 +649,8 @@ void display ( void )   // Creamos la funcion donde se dibuja
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
 		glColor3f(1.0,0.0,0.0);
-		pintaTexto(-12,12.0,-14.0,(void *)font,"Practica 10");
-		pintaTexto(-12,10.5,-14,(void *)font,"Poner algo en Movimiento");
+		pintaTexto(-12,12.0,-14.0,(void *)font,"Proyecto Final");
+		pintaTexto(-12,10.5,-14,(void *)font,"Modelo 3D Animado");
 		glColor3f(1.0,1.0,1.0);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_TEXTURE_2D);

@@ -1,6 +1,2 @@
-﻿  figuras.cpp
-c:\users\irisb\downloads\pr10c\pr10\pr10\figuras.cpp(20): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
-c:\users\irisb\downloads\pr10c\pr10\pr10\figuras.cpp(90): warning C4838: la conversión de 'double' en 'GLfloat' requiere una conversión de restricción
-c:\users\irisb\downloads\pr10c\pr10\pr10\figuras.cpp(516): warning C4101: 'theta': variable local sin referencia
-c:\users\irisb\downloads\pr10c\pr10\pr10\figuras.cpp(516): warning C4101: 'phi': variable local sin referencia
+﻿  main_prac10new.cpp
   PR10.vcxproj -> C:\Users\irisb\Downloads\PR10c\PR10\Debug\PR10.exe
